@@ -6,8 +6,10 @@ import java.util.UUID;
 import org.springframework.http.ResponseEntity;
 
 public interface BinaryContentStorage {
-  UUID put(UUID binaryContentId, byte[] bytes);
-  InputStream get(UUID binaryContentId);
-  ResponseEntity<?> download(BinaryContentDto metaData); // HTTP API 다운로드
 
+  UUID put(UUID binaryContentId, byte[] bytes);
+
+  InputStream get(UUID binaryContentId);
+
+  ResponseEntity<?> download(BinaryContentDto metaData);
 }
